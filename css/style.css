@@ -1,0 +1,444 @@
+/* Base */
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    /* Variáveis */
+    --verde: #07c154;
+    --azul: #031033;
+}
+
+::selection {
+    background: var(--verde);
+    color: #fff;
+}
+
+:hover {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+:focus {
+    outline: none;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+html,
+body {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    
+    background: #fff;
+
+    color: var(--azul);
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    text-align: left;
+
+    scroll-behavior: smooth;
+}
+
+img,
+picture,
+video,
+embed,
+iframe,
+audio {
+    max-width: 100%;
+}
+
+.wrap {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Animações */
+[data-anime] {
+    opacity: 0;
+    transition: .3s;
+}
+  
+[data-anime="left"] {
+    transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime="right"] {
+    transform: translate3d(50px, 0, 0);
+}
+
+[data-anime="top"] {
+    transform: translate3d(0, -50px, 0);
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+[data-opacity] {
+    opacity: 1;
+    transition: .9s;
+}
+
+[data-opacity].fade-opacity {
+    transform: translateY(120px);
+    transition: .9s;
+}
+
+/* Links */
+a {
+    color: inherit;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Tipografia */
+strong {
+    font-weight: 900;
+}
+
+/* Header */
+.brand-bar {
+    width: 100%;
+    padding: 40px 20px;
+
+    text-align: center;
+}
+
+.form-head {
+    width: 100%;
+    padding: 60px 20px;
+
+    background: url(../images/bg-compras.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    color: #fff;
+    text-align: center;
+}
+
+.form-head h1 {
+    margin-bottom: 40px;
+
+    font-size: 3.1rem;
+    font-weight: 900;
+    line-height: 4rem;
+}
+
+.form-head span {
+    display: block;
+
+    font-size: 1.9rem;
+    font-weight: 900;
+    line-height: 3rem;
+}
+
+.form-head .partner-form {
+    max-width: 620px;
+    margin: 40px auto 0;
+}
+
+.form-head .partner-form .input-wrap label {
+    display: block;
+
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align: left;
+}
+
+.form-head .partner-form .input-wrap input {
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    margin: 5px 0 20px;
+
+    background: #fff;
+    border-radius: 5px;
+
+    font-family: 'Lato';
+    font-size: 1.4rem;
+    color: #4b4b4b;
+}
+
+.form-head .partner-form .submit-wrap input {
+    width: 100%;
+    height: 70px;
+    padding: 0 20px;
+    margin: 5px 0 15px;
+
+    background: linear-gradient(180deg,#07c154,#07c154);
+    box-shadow: 0 5px 0 #018939;
+    border-radius: 5px;
+
+    font-family: 'Lato';
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #fff;
+
+    cursor: pointer;
+
+    transition: opacity .3s ease-in-out;
+}
+
+.form-head .partner-form .submit-wrap input:hover {
+    opacity: .95;
+
+    transition: opacity .3s ease-in-out;
+}
+
+/* Marcas */
+.brands {
+    width: 100%;
+    padding: 60px 20px;
+
+    text-align: center;
+}
+
+.brands h2 {
+    margin-bottom: 40px;
+
+    font-size: 3.1rem;
+    font-weight: 900;
+    line-height: 4rem;
+}
+
+.brands h2 span {
+    color: var(--verde);
+}
+
+.brands .brands-grid {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.brands .brands-grid .brands-item {
+    padding: 40px 0;
+}
+
+/* Case de Sucesso */
+.case {
+    width: 100%;
+    padding: 60px 20px;
+
+    background: var(--azul);
+
+    color: #fff;
+    text-align: center;
+}
+
+.case h2 {
+    margin-bottom: 40px;
+
+    font-size: 4.5rem;
+    font-weight: 900;
+    line-height: 6rem;
+}
+
+.case p {
+    margin-bottom: 20px;
+
+    font-size: 2rem;
+    line-height: 3.2rem;
+    text-align: left;
+}
+
+.case span.author {
+    display: block;
+    margin-bottom: 60px;
+
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    text-align: right;
+}
+
+.case .case-grid {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.case .case-grid .case-item h3 {
+    margin: 10px 0 2px;
+
+    font-size: 2.8rem;
+    font-weight: 900;
+    line-height: 4rem;
+}
+
+.case .case-grid .case-item span {
+    display: block;
+
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+}
+
+/* Sobre Nós */
+.about {
+    width: 100%;
+    padding: 60px 20px;
+
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 40px;
+
+    font-size: 4.5rem;
+    font-weight: 900;
+    line-height: 6rem;
+    color: var(--verde);
+}
+
+.about p {
+    margin-bottom: 40px;
+
+    font-size: 2.5rem;
+    line-height: 3.2rem;
+}
+
+.about .about-grid {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.about .about-grid .about-item {
+    padding: 40px 20px;
+}
+
+.about .about-grid .about-item img {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.about .about-grid .about-item span {
+    display: block;
+
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+}
+
+/* Integração Tray */
+.tray .tray-title {
+    width: 100%;
+    padding: 60px 20px;
+
+    background: var(--verde);
+
+    text-align: center;
+}
+
+.tray .tray-title h2 {
+    display: inline;
+    padding: 5px 20px;
+
+    background: var(--azul);
+    border-radius: 10px;
+
+    font-size: 4.5rem;
+    font-weight: 900;
+    line-height: 6rem;
+    color: #fff;
+}
+
+.tray .wrap {
+    padding: 100px 20px;
+
+    text-align: center;
+}
+
+.tray img {
+    margin-bottom: 40px;
+}
+
+.tray p {
+    font-size: 2.25rem;
+    line-height: 3rem;
+}
+
+/* Footer */
+.brand-footer {
+    width: 100%;
+    padding: 40px 20px;
+
+    background: var(--azul);
+
+    text-align: center;
+}
+
+.brand-footer img {
+    height: 35px;
+}
+
+/* Thank You Page */
+.thank-you {
+    padding: 40px 20px;
+
+    background: var(--azul);
+
+    color: #fff;
+}
+
+.thank-you .thanks-grid {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    min-height: 100vh;
+}
+
+.thank-you .thanks-grid .logo-canalfy {
+    height: 40px;
+}
+
+.thank-you .thanks-grid h1 {
+    margin: 40px 0;
+
+    font-size: 4.6rem;
+    font-weight: 900;
+    line-height: 6rem;
+}
+
+.thank-you .thanks-grid p {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .thank-you .thanks-grid,
+    .brands .brands-grid,
+    .case .case-grid,
+    .about .about-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .tray .tray-title h2 {
+        font-size: 2.6rem;
+        line-height: 4rem;
+    }
+
+    .thank-you .thanks-grid {
+        text-align: center;
+    }
+}
