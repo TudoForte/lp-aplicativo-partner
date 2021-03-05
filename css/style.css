@@ -254,7 +254,7 @@ strong {
 
     font-size: 2rem;
     line-height: 3.2rem;
-    text-align: left;
+    text-align: justify;
 }
 
 .case span.author {
@@ -440,5 +440,16 @@ strong {
 
     .thank-you .thanks-grid {
         text-align: center;
+    }
+
+    .case p {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .tray .tray-title h2 {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
     }
 }
