@@ -445,6 +445,10 @@ strong {
     .case p {
         text-align: left;
     }
+
+    .case .case-item {
+        margin-bottom: 40px;
+    }
 }
 
 @media screen and (max-width: 385px) {
